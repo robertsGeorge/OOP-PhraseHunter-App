@@ -9,8 +9,10 @@ class Game {
     this.phrases = this.createPhrases();
   }
 
+
+
   /**
-   * Creates phrases for use in game
+   * Creates phrases for use in game.
    * @return {array}  phraseObjects  -   An array of phrases that could be used in the game.
    */
   createPhrases() {
@@ -22,10 +24,12 @@ class Game {
       // Then push to phraseObjects array.
       phraseObjects.push(new Phrase(phrase));
     });
-
     // push each phrase object into an array, then return that array
     return phraseObjects;
   }
+
+
+
 
   startGame() {
 
