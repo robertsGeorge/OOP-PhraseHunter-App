@@ -3,7 +3,6 @@ const phraseList = [
   'piece of cake',
   'back to square one',
   'cut to the chase',
-  'an arm and a leg',
   'off the record',
   'a sight for sore eyes',
   'cool as a cucumber',

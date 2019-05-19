@@ -40,10 +40,9 @@ class Game {
    */
   startGame() {
     const phrase = this.getRandomPhrase();
-    phrase.addPhraseToDisplay();
     this.activePhrase = phrase;
-    const startScreen = document.getElementById('overlay');
-    startScreen.style.display = 'none';
+    phrase.addPhraseToDisplay();
+    document.getElementById('overlay').style.display = 'none'; // hide the start screen.
   }
 
 
