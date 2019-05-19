@@ -25,7 +25,7 @@ class Game {
   }
 
 
-  
+
   /**
    *  Selects random phrase from phrases property
    * @return {Object} Phrase object chosen to be used
@@ -35,9 +35,15 @@ class Game {
     return this.phrases[randomIndex];
   }
 
-
+  /**
+   * Begins game by selecting a random phrase and displaying it to user
+   */
   startGame() {
-
+    const phrase = this.getRandomPhrase();
+    phrase.addPhraseToDisplay();
+    this.activePhrase = phrase;
+    const startScreen = document.getElementById('overlay');
+    startScreen.style.display = 'none';
   }
 
 
