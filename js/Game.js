@@ -13,7 +13,7 @@ class Game {
 
   /**
    * Creates phrases for use in game.
-   * @return {array}  phraseObjects  -   An array of phrases that could be used in the game.
+   * @return {array}  phraseObjects  -   An array of phrase objects that could be used in the game.
    */
   createPhrases() {
     const phraseObjects = [];
@@ -25,6 +25,15 @@ class Game {
   }
 
 
+  
+  /**
+   *  Selects random phrase from phrases property
+   * @return {Object} Phrase object chosen to be used
+   */
+  getRandomPhrase() {
+    const randomIndex = Math.floor(Math.random() * this.phrases.length);
+    return this.phrases[randomIndex];
+  }
 
 
   startGame() {
@@ -32,9 +41,6 @@ class Game {
   }
 
 
-  getRandomPhrase() {
-
-  }
 
 
   handleInteraction() {
