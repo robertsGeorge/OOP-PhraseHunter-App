@@ -17,14 +17,10 @@ class Game {
    */
   createPhrases() {
     const phraseObjects = [];
-    
-    // Access each phrase (string) in phraseList array in phraseList.js
+    // Access each phrase (string) in phraseList array found in phraseList.js
     phraseList.forEach(phrase => {
-      // Instantiate new Phrase object, passing in phrase.
-      // Then push to phraseObjects array.
       phraseObjects.push(new Phrase(phrase));
     });
-    // push each phrase object into an array, then return that array
     return phraseObjects;
   }
 
