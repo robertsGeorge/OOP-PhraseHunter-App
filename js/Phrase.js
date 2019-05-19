@@ -12,11 +12,18 @@ class Phrase {
    * Display phrase on game board
    */
   addPhraseToDisplay() {
-    // iterate over the string, using for of?
-    const listItems = ``; // to hold the innerHTML that will be built up.
-    for (let i = 0; i < this.phrase.length; i++) {
+    const container = document.getElementById('phrase').firstElementChild;
+    const phrase = this.phrase;
+    let phraseHTML = ``;
 
+    for (let i = 0; i < phrase.length; i++) {
+      if (phrase[i] === ' ') {
+        phraseHTML += `<li class="space"> </li>`;
+      } else {
+        phraseHTML += `<li class="hide letter ${phrase[i]}">${phrase[i]}</li>`;
+      }
     }
+    container.innerHTML = phraseHTML;
   }
 
 
