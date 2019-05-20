@@ -53,16 +53,23 @@ class Game {
   }
 
 
+  /**
+   * Checks to see if the player has revealed all of the letters in the active phrase.
+   * @return {Boolean} - True if game has been won, false if game wasn't won
+   */
+  checkForWin() {
+    const unrevealed = document.querySelector('#phrase .hide');
+    return unrevealed ? false : true;
+  }
+  
+  
+
   removeLife() {
 
   }
 
 
-  checkForWin() {
 
-  }
-
-  
   gameOver() {
 
   }
