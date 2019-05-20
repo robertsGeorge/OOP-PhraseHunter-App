@@ -38,12 +38,16 @@ class Phrase {
     } 
   }
 
+
+  
   /**
    * Displays passed letter on screen after a match is found
    * @param (string) letter - letter to display
    */
   showMatchedLetter(letter) {
-    const matches = document.querySelectorAll(`.${letter}`);// select nodelist of all li elements with className matching letter - classList.contains(string)
-    // iterate over that list and change class hide to show, using classList.replace(old, new)
+    const matches = document.querySelectorAll(`.${letter}`); 
+    matches.forEach(match => match.classList.replace('hide', 'show'));
   }
+
+
 }
