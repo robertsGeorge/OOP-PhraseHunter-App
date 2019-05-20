@@ -64,8 +64,21 @@ class Game {
   
   
 
+  /**
+   * Removes a life from the scoreboard
+   * Increases the value of the missed property
+   * Checks if player has remaining lives and ends game if player is out
+   */
   removeLife() {
-
+    // Replace liveHeart img with lostHeart img
+    const liveHeart = 
+      document.querySelector('img[alt="Heart Icon"]'); // returns first one it finds
+    const lostHeart = 
+      `<img src="images/lostHeart.png" alt="Lost Heart Icon" height="35" width="30">`;
+    liveHeart.parentNode.innerHTML = lostHeart;
+    
+    this.missed += 1;
+    if (this.missed === 5) this.gameOver();
   }
 
 
