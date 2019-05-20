@@ -28,7 +28,11 @@ class Phrase {
 
 
 
-  checkLetter() {
+  /**
+   * Check if passed letter is in phrase
+   * @param (string) letter - letter to check 
+   */
+  checkLetter(letter) {
 
   }
 
