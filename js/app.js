@@ -18,4 +18,5 @@ document.getElementById('qwerty').addEventListener('click', (event) => {
     const letter = event.target.textContent;
     game.activePhrase.checkLetter(letter);
   }
+  
 });

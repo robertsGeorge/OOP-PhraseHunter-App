@@ -33,11 +33,17 @@ class Phrase {
    * @param (string) letter - letter to check 
    */
   checkLetter(letter) {
-
+    if (this.phrase.includes(letter)) {
+      this.showMatchedLetter(letter);
+    } 
   }
 
-
-  showMatchedLetter() {
-    
+  /**
+   * Displays passed letter on screen after a match is found
+   * @param (string) letter - letter to display
+   */
+  showMatchedLetter(letter) {
+    const matches = document.querySelectorAll(`.${letter}`);// select nodelist of all li elements with className matching letter - classList.contains(string)
+    // iterate over that list and change class hide to show, using classList.replace(old, new)
   }
 }
