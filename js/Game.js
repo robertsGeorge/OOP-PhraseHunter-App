@@ -78,7 +78,7 @@ class Game {
     liveHeart.parentNode.innerHTML = lostHeart;
     
     this.missed += 1;
-    if (this.missed === 5) this.gameOver();
+    if (this.missed === 5) this.gameOver(false);
   }
 
 
