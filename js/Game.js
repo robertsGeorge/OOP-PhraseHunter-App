@@ -17,7 +17,7 @@ class Game {
    */
   createPhrases() {
     const phraseObjects = [];
-    // Access each phrase (string) in phraseList array found in phraseList.js
+    // Access array named phraseList located in phraseList.js file
     phraseList.forEach(phrase => {
       phraseObjects.push(new Phrase(phrase));
     });

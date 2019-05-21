@@ -31,17 +31,16 @@ class Phrase {
   /**
    * Check if passed letter is in phrase
    * @param (string) letter - letter to check 
+   * @return {boolean} - true if phrase contains letter, false if it doesn't
    */
   checkLetter(letter) {
-    if (this.phrase.includes(letter)) {
-      this.showMatchedLetter(letter);
-    } 
+    return this.phrase.includes(letter) ? true : false;
   }
 
 
   
   /**
-   * Displays passed letter on screen after a match is found
+   * Displays all occurances of passed letter on screen after a match is found
    * @param (string) letter - letter to display
    */
   showMatchedLetter(letter) {
