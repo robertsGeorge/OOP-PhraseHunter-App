@@ -59,7 +59,7 @@ class Game {
    */
   checkForWin() {
     const unrevealed = document.querySelector('#phrase .hide');
-    // If unrevealed converts to true (it holds a letter), return false
+    // If unrevealed converts to true (i.e. holds a letter with class 'hide'), return false
     return unrevealed ? false : true; 
   }
   
@@ -98,7 +98,7 @@ class Game {
       gameOverMessage.textContent = `You got it! Nice one! Try another!`;
     } else {
       overlay.className = 'lose';
-      gameOverMessage.textContent = `Nice try. Nobody gets them all. Try another phrase!`;
+      gameOverMessage.textContent = `Nice try. Nobody gets them all. Try another!`;
     }
   }
 
