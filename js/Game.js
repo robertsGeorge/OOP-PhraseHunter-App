@@ -59,7 +59,8 @@ class Game {
    */
   checkForWin() {
     const unrevealed = document.querySelector('#phrase .hide');
-    return unrevealed ? false : true;
+    // If unrevealed converts to true (it holds a letter), return false
+    return unrevealed ? false : true; 
   }
   
   
