@@ -82,9 +82,23 @@ class Game {
   }
 
 
-
-  gameOver() {
-
+  /**
+   * Displays game over message
+   * @param {boolean} gameWon - whether or not the user won the game
+   */
+  gameOver(gameWon) {
+    const overlay = document.getElementById('overlay');
+    const gameOverMessage = document.getElementById('game-over-message');
+    
+    overlay.style.display = 'flex';
+    
+    if (gameWon) {
+      overlay.className = 'win';
+      gameOverMessage.textContent = `You got it! Nice one! Try another!`;
+    } else {
+      overlay.className = 'lose';
+      gameOverMessage.textContent = `Nice try. Nobody gets them all. Try another phrase!`;
+    }
   }
 
 }
