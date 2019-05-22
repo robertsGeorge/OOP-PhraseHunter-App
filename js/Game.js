@@ -53,7 +53,7 @@ class Game {
    */
   handleInteraction(button) {
     button.setAttribute('disabled', '');
-    
+
     const letter = button.textContent;
     const letterInPhrase = game.activePhrase.checkLetter(letter);
 
@@ -132,8 +132,6 @@ class Game {
   
 
 
-
-
   /**
    * Displays game over message
    * Resets the UI ready for a new game
@@ -153,14 +151,9 @@ class Game {
       gameOverMessage.textContent = `Nice try. Nobody gets them all. Try another!`;
     }
 
-    // Reset the UI ready for a new game
     this.removePhraseFromDisplay();
     this.resetKeys();
     this.resetHearts();
   }
-
-
-
-
 
 }
