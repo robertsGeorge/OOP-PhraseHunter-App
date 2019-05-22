@@ -21,3 +21,8 @@ document.getElementById('qwerty').addEventListener('click', (event) => {
   }
   
 });
+
+
+document.addEventListener('keydown', (event) => {
+  game.matchKeydownToButton(event.key);
+});

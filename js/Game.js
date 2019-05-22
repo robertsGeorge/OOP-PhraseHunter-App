@@ -69,6 +69,26 @@ class Game {
 
   }
 
+  /**
+   * Finds matching button for keydown event
+   * Passes it to handleInteraction
+   * @param {string} key - the key that was pressed
+   */
+  matchKeydownToButton(key) {
+    const keyButtons = document.querySelectorAll('.key');
+
+    for (let i = 0; i < keyButtons.length; i++) {
+      
+      if (keyButtons[i].textContent === key) {
+        const matchingButton = keyButtons[i];
+        this.handleInteraction(matchingButton);
+        break;
+      }
+    }
+  }
+
+
+
 
   /**
    * Checks to see if the player has revealed all of the letters in the active phrase.
