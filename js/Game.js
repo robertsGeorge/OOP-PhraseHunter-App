@@ -52,7 +52,16 @@ class Game {
    * @param (HTMLButtonElement) button - The clicked button element
    */
   handleInteraction(button) {
-    console.log(button);
+    const letter = button.textContent;
+    const letterInPhrase = game.activePhrase.checkLetter(letter);
+
+    if (letterInPhrase) {
+      this.activePhrase.showMatchedLetter(letter);
+      button.classList.add('chosen');
+    } else {
+      this.removeLife();
+      button.classList.add('wrong');
+    }
   }
 
 
