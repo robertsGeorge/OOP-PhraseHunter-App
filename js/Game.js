@@ -52,6 +52,8 @@ class Game {
    * @param (HTMLButtonElement) button - The clicked button element
    */
   handleInteraction(button) {
+    button.setAttribute('disabled', '');
+    
     const letter = button.textContent;
     const letterInPhrase = game.activePhrase.checkLetter(letter);
 
@@ -65,7 +67,6 @@ class Game {
       this.removeLife();
     }
 
-    button.setAttribute('disabled', '');
   }
 
 
