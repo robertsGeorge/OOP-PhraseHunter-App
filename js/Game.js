@@ -98,11 +98,14 @@ class Game {
 
 
   /**
-   * Restores liveHearts to scoreboard ready for new game
+   * Restores liveHeart icons to scoreboard ready for new game
    */
-  resetLives() {
-    const lostHearts = document.querySelectorAll('img[alt="Lost Heart Icon"]');
-    const liveHeart = `<img src="images/liveHeart.png" alt="Heart Icon" height="35" width="30">`
+  resetHearts() {
+    const lostHearts = document.querySelectorAll('[alt="Lost Heart Icon"]');
+    lostHearts.forEach(heart => {
+      heart.setAttribute('alt', 'Heart Icon');
+      heart.setAttribute('src', 'images/liveHeart.png');
+    });
   }
 
 
