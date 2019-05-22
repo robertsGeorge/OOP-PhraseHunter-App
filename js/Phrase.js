@@ -14,15 +14,21 @@ class Phrase {
   addPhraseToDisplay() {
     const container = document.getElementById('phrase').firstElementChild;
     const phrase = this.phrase;
-    let phraseHTML = ``;
+    
+    /* Wrapping words in span tags allows them to be flex items when 
+    display: flex & flex-wrap: wrap css styles are applied to parent ul, 
+    meaning complete words will wrap, rather than individual letters 
+    getting orphaned onto new lines. */    
+    let phraseHTML = `<span>`;
 
     for (let i = 0; i < phrase.length; i++) {
       if (phrase[i] === ' ') {
-        phraseHTML += `<li class="space"> </li>`;
+        phraseHTML += `</span><li class="space"> </li><span>`;
       } else {
         phraseHTML += `<li class="hide letter ${phrase[i]}">${phrase[i]}</li>`;
       }
     }
+    phraseHTML += `</span>`
     container.innerHTML = phraseHTML;
   }
 

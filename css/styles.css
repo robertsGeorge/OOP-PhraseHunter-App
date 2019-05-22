@@ -92,6 +92,12 @@ button {
 
 /* Phrase */
 
+#phrase ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .letter {
   font-size: var(--font-size-medium);
   height: 65px;
