@@ -99,6 +99,17 @@ class Game {
   }
 
 
+
+  /**
+   * Restores liveHearts to scoreboard ready for new game
+   */
+  resetLives() {
+    const lostHearts = document.querySelectorAll('img[alt="Lost Heart Icon"]');
+    const liveHeart = `<img src="images/liveHeart.png" alt="Heart Icon" height="35" width="30">`
+  }
+
+
+
   /**
    * Displays game over message
    * @param {boolean} gameWon - whether or not the user won the game
@@ -118,6 +129,18 @@ class Game {
     }
   }
 
-  // add reset function calls here
+
+
+  /** 
+   * Re-enable & Reset styling of on-screen keyboard buttons
+   */
+  resetKeys() {
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => {
+      key.removeAttribute('disabled');
+      key.className = 'key'; // Overwrites 'chosen' or 'wrong' class.
+    });
+  }
+
 
 }
