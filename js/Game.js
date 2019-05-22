@@ -64,7 +64,7 @@ class Game {
       button.classList.add('wrong');
       this.removeLife();
     }
-    
+
     button.setAttribute('disabled', '');
   }
 
@@ -117,5 +117,7 @@ class Game {
       gameOverMessage.textContent = `Nice try. Nobody gets them all. Try another!`;
     }
   }
+
+  // add reset function calls here
 
 }

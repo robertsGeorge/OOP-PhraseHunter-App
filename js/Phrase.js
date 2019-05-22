@@ -26,6 +26,13 @@ class Phrase {
     container.innerHTML = phraseHTML;
   }
 
+    /**
+     * Remove phrase from game board
+     */
+  removePhraseFromDisplay() {
+    const container = document.getElementById('phrase').firstElementChild;
+    container.innerHTML = null;
+  }
 
 
   /**
