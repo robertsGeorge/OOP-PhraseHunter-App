@@ -93,7 +93,7 @@ button {
 #phrase {
   max-width: 1100px;
   margin: 0 auto;
-  padding-left: calc(65px/2); /* To offset the space on right hand side of row */
+  /* padding-left: calc(65px/2); To offset the space on right hand side of row */
 }
 
 #phrase ul li {
