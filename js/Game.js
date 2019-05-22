@@ -108,7 +108,17 @@ class Game {
     });
   }
 
-
+  
+  /** 
+   * Re-enable & Reset styling of on-screen keyboard buttons
+   */
+  resetKeys() {
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => {
+      key.removeAttribute('disabled');
+      key.className = 'key'; // Overwrites 'chosen' or 'wrong' class.
+    });
+  }
 
 
   /**
@@ -125,6 +135,7 @@ class Game {
 
   /**
    * Displays game over message
+   * Resets the UI ready for a new game
    * @param {boolean} gameWon - whether or not the user won the game
    */
   gameOver(gameWon) {
@@ -140,20 +151,15 @@ class Game {
       overlay.className = 'lose';
       gameOverMessage.textContent = `Nice try. Nobody gets them all. Try another!`;
     }
+
+    // Reset the UI ready for a new game
+    this.removePhraseFromDisplay();
+    this.resetKeys();
+    this.resetHearts();
   }
 
 
 
-  /** 
-   * Re-enable & Reset styling of on-screen keyboard buttons
-   */
-  resetKeys() {
-    const keys = document.querySelectorAll('.key');
-    keys.forEach(key => {
-      key.removeAttribute('disabled');
-      key.className = 'key'; // Overwrites 'chosen' or 'wrong' class.
-    });
-  }
 
 
 }
