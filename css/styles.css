@@ -79,9 +79,6 @@ button {
   padding: 10px;
 }
 
-#phrase ul li {
-  margin-top: 15px;
-}
 
 /* Title */
 
@@ -90,8 +87,20 @@ button {
 }
 
 
-/* Phrase */
+/* === PHRASE === */
 
+
+#phrase {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: calc(65px/2); /* To offset the space on right hand side of row */
+}
+
+#phrase ul li {
+  margin-top: 15px;
+}
+
+/* flex container */
 #phrase ul {
   display: flex;
   flex-wrap: wrap;
