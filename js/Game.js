@@ -87,13 +87,10 @@ class Game {
    * Checks if player has remaining lives and ends game if player is out
    */
   removeLife() {
-    // Replace liveHeart img with lostHeart img
-    const liveHeart = 
-      document.querySelector('img[alt="Heart Icon"]'); // returns first one it finds
-    const lostHeart = 
-      `<img src="images/lostHeart.png" alt="Lost Heart Icon" height="35" width="30">`;
-    liveHeart.parentNode.innerHTML = lostHeart;
-    
+    const lifeIcon = document.querySelector('[alt="Heart Icon"]'); // returns first one it finds
+    lifeIcon.setAttribute('alt', 'Lost Heart Icon');
+    lifeIcon.setAttribute('src', 'images/lostHeart.png');
+   
     this.missed += 1;
     if (this.missed === 5) this.gameOver(false);
   }
