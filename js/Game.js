@@ -75,6 +75,7 @@ class Game {
    * @param {string} key - the key that was pressed
    */
   matchKeydownToButton(key) {
+    key = key.toLowerCase(); // So it works even if user has caps lock on.
     const keyButtons = document.querySelectorAll('.key');
 
     for (let i = 0; i < keyButtons.length; i++) {
