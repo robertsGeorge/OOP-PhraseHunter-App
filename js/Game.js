@@ -56,12 +56,16 @@ class Game {
     const letterInPhrase = game.activePhrase.checkLetter(letter);
 
     if (letterInPhrase) {
-      this.activePhrase.showMatchedLetter(letter);
       button.classList.add('chosen');
+      this.activePhrase.showMatchedLetter(letter);
+      if (this.checkForWin()) this.gameOver(true);
+      
     } else {
-      this.removeLife();
       button.classList.add('wrong');
+      this.removeLife();
     }
+    
+    button.setAttribute('disabled', '');
   }
 
 
