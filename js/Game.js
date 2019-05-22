@@ -110,6 +110,19 @@ class Game {
 
 
 
+
+  /**
+   * Remove phrase from game board
+   */
+  removePhraseFromDisplay() {
+    const container = document.getElementById('phrase').firstElementChild;
+    container.innerHTML = null;
+  }
+  
+
+
+
+
   /**
    * Displays game over message
    * @param {boolean} gameWon - whether or not the user won the game
