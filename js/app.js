@@ -15,8 +15,9 @@ document.getElementById('btn__reset').addEventListener('click', () => {
 document.getElementById('qwerty').addEventListener('click', (event) => {
   
   if (event.target.className === 'key') {
-    const letter = event.target.textContent;
-    game.activePhrase.checkLetter(letter);
+    // const letter = event.target.textContent;
+    // game.activePhrase.checkLetter(letter);
+    game.handleInteraction(event.target);
   }
   
 });
