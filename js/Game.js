@@ -123,7 +123,7 @@ class Game {
     }, 750);
    
     this.missed += 1;
-    if (this.missed === 5) this.gameOver(false);
+    if (this.missed === 4) this.gameOver(false);
   }
 
 
