@@ -157,10 +157,19 @@ class Game {
   /**
    * Displays game over message
    * Resets the UI ready for a new game
-   * Removes the keydown event listener
+   * Removes the click & keydown event listeners
    * @param {boolean} gameWon - whether or not the user won the game
    */
   gameOver(gameWon) {
+
+    /* Remove event listeners to prevent click/keydown events triggering 
+    game methods in background while gameOver method executes */
+    document.getElementById('qwerty').removeEventListener('click', clickHandler);
+    document.removeEventListener('keydown', keydownHandler);
+
+    /* Insert brief delay before displaying overlay message, 
+    to allow user to register phrase success or last life lost */
+    
     const overlay = document.getElementById('overlay');
     const gameOverMessage = document.getElementById('game-over-message');
     
@@ -178,9 +187,7 @@ class Game {
     this.resetKeys();
     this.resetHearts();
 
-   /*  Prevent keydown events triggering game methods in background 
-    while game over message is displayed */
-    document.removeEventListener('keydown', keydownHandler);
+   
   }
 
 }
