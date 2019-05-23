@@ -12,3 +12,12 @@
 * If the selected letter is not in the phrase, one of the player's hearts in the scoreboard is changed from a "live" heart to a "lost" heart.
 
 * The player keeps choosing letters until they reveal all the letters in the phrase, or they make five incorrect guesses.
+
+## Skills demonstrated:
+* Object-orientated JavaScript (ES6 Classes, object instantiation, method inheritance, etc.)
+* Vanilla JavaScript throughout
+* Working with arrays and array methods
+* DOM manipulation, dynamic generation of HTML content
+* Event handling, use of event propagation, event listener removal
+* Callbacks with setTimeout();
+* CSS transform/transition (heart icon animation)
