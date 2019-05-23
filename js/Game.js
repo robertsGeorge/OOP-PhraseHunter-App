@@ -111,8 +111,16 @@ class Game {
    */
   removeLife() {
     const lifeIcon = document.querySelector('[alt="Heart Icon"]'); // returns first one it finds
-    lifeIcon.setAttribute('alt', 'Lost Heart Icon');
-    lifeIcon.setAttribute('src', 'images/lostHeart.png');
+    
+    /* Apply heart icon css animation */
+    lifeIcon.className = 'spin-heart';
+    
+    /* Allow animation to complete before changing to lost heart icon */
+    window.setTimeout(() => {
+      lifeIcon.className = null;
+      lifeIcon.setAttribute('alt', 'Lost Heart Icon');
+      lifeIcon.setAttribute('src', 'images/lostHeart.png');
+    }, 750);
    
     this.missed += 1;
     if (this.missed === 5) this.gameOver(false);

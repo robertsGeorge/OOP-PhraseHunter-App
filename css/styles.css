@@ -217,3 +217,13 @@ button {
 .lose a {
   color: var(--color-lose);
 }
+
+
+
+
+/* === Heart icon animation === */
+
+.spin-heart {
+  transform: rotate(720deg) scale(0, 0);
+  transition: transform 0.75s ease-in;
+}
