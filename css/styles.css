@@ -109,10 +109,11 @@ button {
 }
 
 .letter {
-  font-size: var(--font-size-medium);
+  /* font-size: var(--font-size-medium); */
+  font-size: 27px;
   height: 65px;
   width: 65px;
-  padding: 20px 1px 0 1px;
+  padding: 14px 1px 0 1px;
   margin-right: 2px;
   color: transparent;
   background: var(--color-neutral-light);
@@ -128,12 +129,12 @@ button {
 .show {
   color: #fff;
   background-color: #4ac0d5;
-  font-size: 20px;
-  height: 65px;
+  /* font-size: 20px; */
+  /* height: 65px;
   width: 65px;
   padding: 20px 1px 0 1px;
   margin-right: 2px;
-  border-radius: 5px;
+  border-radius: 5px; */
   -webkit-animation-duration: .5s;
   animation-duration: .5s;
 }
