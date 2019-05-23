@@ -169,23 +169,25 @@ class Game {
 
     /* Insert brief delay before displaying overlay message, 
     to allow user to register phrase success or last life lost */
-    
-    const overlay = document.getElementById('overlay');
-    const gameOverMessage = document.getElementById('game-over-message');
-    
-    overlay.style.display = 'flex';
-    
-    if (gameWon) {
-      overlay.className = 'win';
-      gameOverMessage.textContent = `You got it! Nice one! Try another!`;
-    } else {
-      overlay.className = 'lose';
-      gameOverMessage.textContent = `Nice try. Nobody gets them all. Try another!`;
-    }
+    window.setTimeout(() => {
+      const overlay = document.getElementById('overlay');
+      const gameOverMessage = document.getElementById('game-over-message');
+      
+      overlay.style.display = 'flex'; // makes the overlay appear again
+      
+      if (gameWon) {
+        overlay.className = 'win';
+        gameOverMessage.textContent = `You got it! Nice one! Try another!`;
+      } else {
+        overlay.className = 'lose';
+        gameOverMessage.textContent = `Nice try. Nobody gets them all. Try another!`;
+      }
+  
+      this.removePhraseFromDisplay();
+      this.resetKeys();
+      this.resetHearts();
 
-    this.removePhraseFromDisplay();
-    this.resetKeys();
-    this.resetHearts();
+    }, 1000);
 
    
   }
