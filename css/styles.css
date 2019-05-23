@@ -190,6 +190,10 @@ button {
   border-radius: 5px;
 }
 
+#game-over-message {
+  margin-bottom: 40px;
+}
+
 .title {
   color: #FFF;
 }
