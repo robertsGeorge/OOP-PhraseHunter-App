@@ -82,6 +82,7 @@ class Game {
       
       if (keyButtons[i].textContent === key) {
         const matchingButton = keyButtons[i];
+          if (matchingButton.disabled) break;
         this.handleInteraction(matchingButton);
         break;
       }
