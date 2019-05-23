@@ -9,6 +9,9 @@ document.getElementById('btn__reset').addEventListener('click', () => {
   game = new Game();
   game.startGame();
 
+  document.addEventListener('keydown', (event) => {
+    game.matchKeydownToButton(event.key);
+  });
 });
 
 
@@ -22,7 +25,3 @@ document.getElementById('qwerty').addEventListener('click', (event) => {
   
 });
 
-
-document.addEventListener('keydown', (event) => {
-  game.matchKeydownToButton(event.key);
-});
