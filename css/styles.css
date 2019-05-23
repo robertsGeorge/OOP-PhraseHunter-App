@@ -4,8 +4,8 @@
 /* Variables */
 
 :root {
-  --color-win: #78CF82;
-  --color-lose: #D94545;
+  --color-win: #199169;
+  --color-lose: #911919;
   --color-start: #5b85b7;
   --color-neutral: #445069;
   --color-neutral-light: #D2D2D2;
@@ -84,7 +84,7 @@ button {
 /* Title */
 
 .header {
-  color: #3a3f58;
+  color: #414141;
 }
 
 
@@ -128,7 +128,7 @@ button {
 
 .show {
   color: #fff;
-  background-color: #4ac0d5;
+  background-color: #195b91;
   /* font-size: 20px; */
   /* height: 65px;
   width: 65px;
@@ -148,21 +148,21 @@ button {
 }
 
 .chosen {
-  background: #3a3f58;
+  background: #199169;
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
 }
 
 .wrong {
-  background: #f7a964;
+  background: #d46904;
   color: #FFFFFF;
 }
 
 .btn__reset {
   padding: 16px;
   margin: 50px auto;
-  background: #f7a964;
+  background: #911919;
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
@@ -201,7 +201,7 @@ button {
 }
 
 .start {
-  background-color: #3a3f58;
+  background-color: #195b91;
 }
 
 .start a {
@@ -217,7 +217,7 @@ button {
 }
 
 .lose {
-  background-color: #f5785f;
+  background-color: #d46904;
 }
 
 .lose a {
