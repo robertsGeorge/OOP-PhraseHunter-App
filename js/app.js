@@ -5,26 +5,39 @@
 
 let game;
 
+
+
+/* 
+Starts game when button is clicked
+Enables physical keyboard user interaction
+ */
+document.getElementById('btn__reset').addEventListener('click', () => {
+  game = new Game();
+  game.startGame();
+  
+  document.addEventListener('keydown', keydownHandler);
+});
+
+/* 
+keydownHandler is declared in script scope to allow reference in
+removeEventListener call in game.gameOver() method. 
+(removeEventListener needs the handler to be identifiable 
+via a variable name.) 
+*/
 function keydownHandler(event) {
   game.matchKeydownToButton(event.key);
 }
 
-document.getElementById('btn__reset').addEventListener('click', () => {
-  game = new Game();
-  game.startGame();
-
-  document.addEventListener('keydown', keydownHandler);
-
-});
 
 
+/* 
+Enables user interaction by clicking on-screen key buttons
+(uses event propagation)
+*/
 document.getElementById('qwerty').addEventListener('click', (event) => {
   
   if (event.target.className === 'key') {
-    // const letter = event.target.textContent;
-    // game.activePhrase.checkLetter(letter);
     game.handleInteraction(event.target);
   }
-  
 });
 

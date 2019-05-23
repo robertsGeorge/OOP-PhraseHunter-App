@@ -178,6 +178,8 @@ class Game {
     this.resetKeys();
     this.resetHearts();
 
+   /*  Prevent keydown events triggering game methods in background 
+    while game over message is displayed */
     document.removeEventListener('keydown', keydownHandler);
   }
 
