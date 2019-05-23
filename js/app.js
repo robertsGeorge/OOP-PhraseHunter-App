@@ -5,13 +5,16 @@
 
 let game;
 
+function keydownHandler(event) {
+  game.matchKeydownToButton(event.key);
+}
+
 document.getElementById('btn__reset').addEventListener('click', () => {
   game = new Game();
   game.startGame();
 
-  document.addEventListener('keydown', (event) => {
-    game.matchKeydownToButton(event.key);
-  });
+  document.addEventListener('keydown', keydownHandler);
+
 });
 
 

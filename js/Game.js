@@ -157,6 +157,7 @@ class Game {
   /**
    * Displays game over message
    * Resets the UI ready for a new game
+   * Removes the keydown event listener
    * @param {boolean} gameWon - whether or not the user won the game
    */
   gameOver(gameWon) {
@@ -176,6 +177,8 @@ class Game {
     this.removePhraseFromDisplay();
     this.resetKeys();
     this.resetHearts();
+
+    document.removeEventListener('keydown', keydownHandler);
   }
 
 }
